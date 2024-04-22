@@ -780,6 +780,7 @@ input[type="number"] {
       > li {
         > ul {
           position: absolute;
+          z-index: 1000;
           bottom: 87%;
           background-color: #676767;
           border-radius: 3px;
@@ -1236,6 +1237,11 @@ input[type="number"] {
         }
       }
     }
+    .message-box.forgot-page-message {
+      @include md {
+        padding: 0px 64px 36px;
+      }
+    }
   }
 
   .footer-container {
@@ -1432,6 +1438,9 @@ input[type="number"] {
   }
   .section-container.signup {
     padding: 72px 24px 72px;
+  }
+  .section-container.forgot-page {
+    padding: 24px 24px 24px;
   }
   section:first-child {
     .message {

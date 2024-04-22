@@ -23,9 +23,9 @@ function Forgot() {
         logoEnd="/"
         headerSupport={<HeaderSupport helpButton={""} signText={"Sign In"} />}
       />
-      <div className="section-container">
+      <div className="section-container forgot-page">
         <section className="not-found">
-          <div className="message-box message">
+          <div className="message-box message forgot-page-message">
             <div>
               <img src={forgot} alt="404 traffic cone"></img>
             </div>
