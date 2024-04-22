@@ -40,7 +40,7 @@ function SignUp() {
         logoEnd={"/"}
         headerSupport={<HeaderSupport helpButton={""} signText={"Sign In"} />}
       />
-      <div className="section-container">
+      <div className="section-container signup">
         <section className="login find-me">
           <div className="message-box">
             <div>
