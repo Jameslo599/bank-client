@@ -3,7 +3,7 @@ import React from "react";
 function Filter(props) {
   const fill = props.fill || "currentColor";
   const secondaryfill = props.secondaryfill || fill;
-  const strokewidth = props.strokewidth || 1;
+  //const strokewidth = props.strokewidth || 1;
   const width = props.width || "18px";
   const height = props.height || "100%";
 

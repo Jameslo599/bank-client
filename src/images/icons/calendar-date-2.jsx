@@ -3,7 +3,7 @@ import React from "react";
 function CalendarDate2(props) {
   const fill = props.fill || "#0D74AF";
   const secondaryfill = props.secondaryfill || fill;
-  const strokewidth = props.strokewidth || 1;
+  //const strokewidth = props.strokewidth || 1;
   const width = props.width || "24px";
   const height = props.height || "100%";
 

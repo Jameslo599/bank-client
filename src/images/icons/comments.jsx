@@ -3,7 +3,7 @@ import React from "react";
 function Comments(props) {
   const fill = props.fill || "#004878";
   const secondaryfill = props.secondaryfill || fill;
-  const strokewidth = props.strokewidth || 1;
+  //const strokewidth = props.strokewidth || 1;
   const width = props.width || "20px";
   const height = props.height || "100%";
 
