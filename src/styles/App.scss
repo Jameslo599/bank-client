@@ -749,6 +749,7 @@ input[type="number"] {
   border-top: 1px solid #c9ced2;
 }
 .footer {
+  flex-shrink: 0;
   padding: 24px 12px 18px;
   position: relative;
   a {
@@ -946,9 +947,9 @@ input[type="number"] {
 //404 Page
 .not-found,
 .login {
-  @include flexContainer(column, space-between, unset);
+  @include flexContainer(column, center, unset);
   background-color: #fafafa;
-  height: 100vh;
+  min-height: 100vh;
   .header {
     border-width: 1px;
     .header-support {
@@ -982,11 +983,10 @@ input[type="number"] {
     }
   }
   section {
+    min-height: 100%;
+    flex: 1;
     background-color: #fafafa;
     padding: 32px;
-    @include md {
-      padding-top: 92px;
-    }
     .message-box {
       @include flexContainer(column, space-evenly, center);
       height: 100%;
@@ -1104,6 +1104,8 @@ input[type="number"] {
 }
 
 .login {
+  //   @include flexContainer(column, center, unset);
+  //   min-height: 100vh;
   @include md {
     justify-content: center;
   }
@@ -1112,7 +1114,6 @@ input[type="number"] {
   }
   section {
     padding: 0;
-
     .message-box {
       @include lg-shadow(1px);
       height: fit-content;
@@ -1120,7 +1121,8 @@ input[type="number"] {
       border: 1px solid #c9ced2;
       background-color: #fff;
       border-radius: 8px;
-      margin: 24px;
+      //   margin: 0 24px;
+      position: relative;
       z-index: 3;
       @include md {
         width: 28.5rem;
@@ -1405,8 +1407,11 @@ input[type="number"] {
 // }
 
 #unique-background {
+  flex: 1;
+  min-height: 100%;
   background: radial-gradient(rgb(2, 61, 91), rgb(2, 61, 91));
   position: relative;
+  padding: 24px 7%;
   @include md {
     overflow: hidden;
     .star-pattern {
@@ -1557,7 +1562,6 @@ input[type="number"] {
 
 //Forgot Page
 .forgot {
-  justify-content: unset;
   .not-found,
   .login {
     height: auto;
@@ -1592,10 +1596,10 @@ input[type="number"] {
     }
   }
   .section-container.signup {
-    padding: 72px 24px 72px;
+    padding: 24px;
   }
   .section-container.forgot-page {
-    padding: 24px 24px 24px;
+    padding: 48px 24px 48px;
   }
   section:first-child {
     .message {
@@ -1623,6 +1627,7 @@ input[type="number"] {
         width: 100%;
       }
       img {
+        border-radius: 100%;
         width: 4.5rem;
         margin-top: 0;
         @include md {
@@ -1634,7 +1639,6 @@ input[type="number"] {
   .find-me.login {
     .message-box {
       padding: 24px 18px;
-      margin: 0 auto;
       label {
         font-weight: 500;
       }
