@@ -18,9 +18,10 @@ function NotFound() {
           </div>
           <h1>We can't find the page you're trying to reach.</h1>
           <p>The link you are using may be outdated or misspelled.</p>
-          <button>
-            <Link to="/">OK</Link>
-          </button>
+
+          <Link className="not-found-link" to="/">
+            OK
+          </Link>
         </div>
       </section>
       <MyFooterView />

@@ -1026,11 +1026,19 @@ input[type="number"] {
         max-width: 200px;
         background-color: #255f82;
         margin: 24px 16px 0;
+        color: #fff;
         @include md {
           max-width: 88px;
         }
-        a {
-          color: #fff;
+      }
+      .not-found-link {
+        @include button(#fff, transparent);
+        max-width: 200px;
+        background-color: #255f82;
+        margin: 24px 16px 0;
+        color: #fff;
+        @include md {
+          max-width: 88px;
         }
       }
     }
