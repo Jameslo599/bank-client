@@ -113,6 +113,9 @@ li {
   line-height: 32px;
   border-top: 1px solid #c9ced2;
 }
+input {
+  background-color: #fff;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   //    display: none; <- Crashes Chrome on hover
@@ -1158,6 +1161,7 @@ input[type="number"] {
             border: 1px solid #000;
             border-radius: 4px;
             font-size: 1.125rem;
+            background-color: #fff;
             &:focus,
             &:hover,
             &:focus-visible {
