@@ -43,10 +43,9 @@ function MyHeaderView({ logoEnd, headerSupport, backArrow = false }) {
               </button>
             )
           ) : null}
-          <div>
-            <Link className="logo-nav" onClick={refreshPage}>
-              <img className="logo" alt="capital one logo" src={logo}></img>
-            </Link>
+          <div className="logo-nav">
+            <Link onClick={refreshPage}></Link>
+            <img className="logo" alt="capital one logo" src={logo}></img>
           </div>
           {headerSupport}
         </nav>
