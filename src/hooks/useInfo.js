@@ -17,8 +17,8 @@ function useInfo(data, param, callback) {
       transition: Bounce,
       //toastId: "error",
     });
-  const notifySuccess = () =>
-    toast.success("Updated!", {
+  const notifySuccess = (msg) =>
+    toast.success(msg, {
       position: "top-center",
       autoClose: true,
       hideProgressBar: false,
@@ -40,20 +40,23 @@ function useInfo(data, param, callback) {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${param}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/${param}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const confirmation = await response.json();
       const status = await response.status;
       if (confirmation === "signout") {
         handleClick(e);
       }
       if (status === 200) {
-        notifySuccess();
+        notifySuccess(confirmation);
         if (data.message) data.message = "";
         callback();
       } else {

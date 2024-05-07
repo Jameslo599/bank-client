@@ -14,8 +14,8 @@ function AccountTileView({ balance, accNum }) {
             </span>
             <div>
               <span>$</span>
-              {balance}
-              <span>00</span>
+              {balance.slice(0, -3)}
+              <span>{balance.slice(-2)}</span>
             </div>
             <span>AVAILABLE BALANCE</span>
           </div>
@@ -27,9 +27,9 @@ function AccountTileView({ balance, accNum }) {
           <div>
             <div>
               <span>$</span>
-              {balance}
+              {balance.slice(0, -3)}
               <span className="decimal">.</span>
-              <span>00</span>
+              <span>{balance.slice(-2)}</span>
             </div>
             <span>CURRENT BALANCE</span>
           </div>

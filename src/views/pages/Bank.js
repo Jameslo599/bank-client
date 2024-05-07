@@ -16,9 +16,13 @@ import RightArrow from "../../images/icons/right-arrow";
 import Money from "../../images/icons/attach_money";
 import UpdateModal from "../components/UpdateModal";
 import UpdateBalance from "../components/UpdateBalance";
+import SendMoney from "../components/SendMoney";
+import TransactionItems from "../components/TransactionItems";
+import { format, parseISO } from "date-fns";
 
 function Bank() {
   const [backendData, setBackendData] = useState(null);
+  const [history, setHistory] = useState(null);
   const [isMobile, setIsMobile] = useState();
   const [error, setError] = useState();
   const navigate = useNavigate();
@@ -31,7 +35,8 @@ function Bank() {
       if (
         elements[i].type === "text" ||
         elements[i].type === "tel" ||
-        elements[i].type === "email"
+        elements[i].type === "email" ||
+        elements[i].type === "number"
       ) {
         elements[i].value = "";
       }
@@ -41,11 +46,18 @@ function Bank() {
 
   const personalize = useCallback(async () => {
     try {
-      const response = await fetch(`/api/user`);
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/api/user`
+      );
       const data = await response.json();
       if (!data) return navigate("/");
       setBackendData(data);
       setOpen(false);
+      const transaction = await fetch(
+        `https://capital-one-server.onrender.com/api/bank/history`
+      );
+      const transactionHistory = await transaction.json();
+      setHistory(transactionHistory.reverse());
     } catch (e) {
       setError(e);
     }
@@ -54,7 +66,7 @@ function Bank() {
     personalize();
   }, [navigate, personalize]);
 
-  //choose the screen size
+  //Choose the screen size
   const handleResize = () => {
     if (window.innerWidth < 1000) {
       setIsMobile(true);
@@ -66,7 +78,9 @@ function Bank() {
   useEffect(() => {
     const personalize = async () => {
       try {
-        const response = await fetch(`/api/user`);
+        const response = await fetch(
+          `https://capital-one-server.onrender.com/api/user`
+        );
         const data = await response.json();
 
         if (!data) return navigate("/");
@@ -127,12 +141,18 @@ function Bank() {
                 <span>AVAILABLE BALANCE</span>
                 <div>
                   <span>$</span>
-                  {backendData.balance}
-                  <span>00</span>
+                  {backendData.balance.slice(0, -3)}
+                  <span>{backendData.balance.slice(-2)}</span>
                 </div>
               </div>
               <div>
-                <button>Transfer Money</button>
+                <button
+                  onClick={() => {
+                    setOpen(1);
+                  }}
+                >
+                  Deposit Money
+                </button>
               </div>
             </div>
           </div>
@@ -140,13 +160,17 @@ function Bank() {
             <div className="service-strip">
               <div
                 onClick={() => {
-                  setOpen(1);
+                  setOpen(3);
                 }}
               >
                 <Money />
-                <span>Deposit Money</span>
+                <span>Withdraw</span>
               </div>
-              <div>
+              <div
+                onClick={() => {
+                  setOpen(2);
+                }}
+              >
                 <CalendarDate2 />
                 <span>Pay Bills</span>
               </div>
@@ -211,7 +235,19 @@ function Bank() {
                   </button>
                 </div>
                 <div className="transaction-history">
-                  <div>NO TRANSACTIONS</div>
+                  {!history || !history.length ? (
+                    <div>NO TRANSACTIONS</div>
+                  ) : (
+                    history.map((e, i) => (
+                      <TransactionItems
+                        name={e.recipient}
+                        reason={e.reason}
+                        date={format(parseISO(e.date), "MMMM d',' y")}
+                        amount={e.amount}
+                        balance={e.balance}
+                      />
+                    ))
+                  )}
                 </div>
               </div>
               <div className="transactions-disclaimer">
@@ -230,9 +266,27 @@ function Bank() {
           <UpdateModal
             open={open === 1}
             onClose={onClose}
-            children={<UpdateBalance personalize={personalize} />}
+            children={
+              <UpdateBalance personalize={personalize} action={"deposit"} />
+            }
             title={"Deposit Money"}
             subject={"deposit"}
+          ></UpdateModal>
+          <UpdateModal
+            open={open === 2}
+            onClose={onClose}
+            children={<SendMoney personalize={personalize} />}
+            title={"Send Money"}
+            subject={"send"}
+          ></UpdateModal>
+          <UpdateModal
+            open={open === 3}
+            onClose={onClose}
+            children={
+              <UpdateBalance personalize={personalize} action={"withdraw"} />
+            }
+            title={"Withdraw Money"}
+            subject={"withdraw"}
           ></UpdateModal>
           <MyFooterView />
         </div>

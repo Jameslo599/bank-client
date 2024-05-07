@@ -39,13 +39,16 @@ function usePasswordReset(data, param) {
     dismissAll();
     setIsLoading(true);
     try {
-      const response = await fetch(`${param}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/${param}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const confirmation = await response.json();
       const status = await response.status;
       if (status === 200) {

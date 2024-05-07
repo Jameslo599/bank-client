@@ -57,10 +57,13 @@ function Profile() {
       }
       const formData = new FormData();
       formData.append("file", e.target.files[0]);
-      const response = await fetch("/api/avatar", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://capital-one-server.onrender.com/api/avatar",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
       const data = await response.json();
       const { current } = uploadedImage;
       current.src = data;
@@ -71,7 +74,9 @@ function Profile() {
 
   const personalize = useCallback(async () => {
     try {
-      const response = await fetch(`/api/user`);
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/api/user`
+      );
       const data = await response.json();
       if (!data) return navigate("/");
       setBackendData(data);

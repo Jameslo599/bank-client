@@ -34,7 +34,9 @@ function Security() {
 
   const personalize = useCallback(async () => {
     try {
-      const response = await fetch(`/api/user`);
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/api/user`
+      );
       const data = await response.json();
       if (!data) return navigate("/");
       setBackendData(data);

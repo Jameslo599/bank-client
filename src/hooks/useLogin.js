@@ -38,13 +38,16 @@ function useLogin(data, param) {
     setIsLoading(true);
     data.userName = data.userName.toLowerCase();
     try {
-      const response = await fetch(`${param}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `https://capital-one-server.onrender.com/${param}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const confirmation = await response.json();
       const status = await response.status;
       console.log(confirmation);

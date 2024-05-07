@@ -14,7 +14,9 @@ function Login() {
   useEffect(() => {
     const logged = async () => {
       try {
-        const response = await fetch("/api/getlogged?");
+        const response = await fetch(
+          "https://capital-one-server.onrender.com/api/getlogged?"
+        );
         const data = await response.json();
         return data === false ? null : navigate(`/home`);
       } catch (error) {

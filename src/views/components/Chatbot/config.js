@@ -30,7 +30,7 @@ const config = {
         options: [
           {
             text: "Transfer money",
-            url: "#",
+            url: "/bank",
             id: 1,
           },
         ],
@@ -90,7 +90,7 @@ const config = {
         options: [
           {
             text: "Recent transactions",
-            url: "#",
+            url: "/home",
             id: 1,
           },
         ],
