@@ -10,6 +10,7 @@ function useSignOut() {
         "https://capital-one-server.onrender.com/api/session",
         {
           method: "DELETE",
+          credentials: "include", // Include cookies in the request
           headers: {
             "Content-Type": "application/json",
           },

@@ -9,7 +9,8 @@ function TransactTileView() {
   const personalize = useCallback(async () => {
     try {
       const transaction = await fetch(
-        `https://capital-one-server.onrender.com/api/bank/history`
+        `https://capital-one-server.onrender.com/api/bank/history`,
+        { credentials: "include" } // Include cookies in the request
       );
       const transactionHistory = await transaction.json();
       setHistory(transactionHistory.reverse().slice(0, 4));

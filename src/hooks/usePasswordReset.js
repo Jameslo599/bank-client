@@ -43,6 +43,7 @@ function usePasswordReset(data, param) {
         `https://capital-one-server.onrender.com${param}`,
         {
           method: "PUT",
+          credentials: "include", // Include cookies in the request
           headers: {
             "Content-Type": "application/json",
           },

@@ -15,7 +15,8 @@ function Login() {
     const logged = async () => {
       try {
         const response = await fetch(
-          "https://capital-one-server.onrender.com/api/getlogged?"
+          "https://capital-one-server.onrender.com/api/getlogged?",
+          { credentials: "include" } // Include cookies in the request
         );
         const data = await response.json();
         return data === false ? console.log(data) : navigate(`/home`);

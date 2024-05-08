@@ -35,7 +35,8 @@ function Security() {
   const personalize = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com/api/user`
+        `https://capital-one-server.onrender.com/api/user`,
+        { credentials: "include" } // Include cookies in the request
       );
       const data = await response.json();
       if (!data) return navigate("/");

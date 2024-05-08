@@ -42,6 +42,7 @@ function useSignUp(data, param) {
         `https://capital-one-server.onrender.com${param}`,
         {
           method: "POST",
+          credentials: "include", // Include cookies in the request
           headers: {
             "Content-Type": "application/json",
           },
