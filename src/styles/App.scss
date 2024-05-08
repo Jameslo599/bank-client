@@ -1699,7 +1699,7 @@ input[type="number"] {
   transform: translate(-50%, -50%);
   background-color: #f2f2f3;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   opacity: 0;
   transition: all 0.4s ease;
   > button:first-child {
@@ -1745,7 +1745,7 @@ input[type="number"] {
 //Chatbot
 .react-chatbot-kit-chat-container {
   width: inherit;
-  height: 100vh;
+  height: 100svh;
   padding-top: 45px;
   .react-chatbot-kit-chat-inner-container {
     height: 100%;
@@ -2441,7 +2441,7 @@ input[type="number"] {
   transform: translate(-50%, -50%);
   background-color: #fff;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   opacity: 0;
   transition: all 0.4s ease;
 
