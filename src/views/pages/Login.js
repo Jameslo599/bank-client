@@ -18,7 +18,7 @@ function Login() {
           "https://capital-one-server.onrender.com/api/getlogged?"
         );
         const data = await response.json();
-        return data === false ? null : navigate(`/home`);
+        return data === false ? console.log(data) : navigate(`/home`);
       } catch (error) {
         console.log(error);
       }

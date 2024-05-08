@@ -28,7 +28,6 @@ function useInfo(data, param, callback) {
       progress: undefined,
       theme: "colored",
       transition: Bounce,
-      // toastId: "success",
     });
   const dismissAll = () => toast.dismiss();
 
