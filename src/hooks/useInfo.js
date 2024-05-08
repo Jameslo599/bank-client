@@ -41,7 +41,7 @@ function useInfo(data, param, callback) {
 
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com/${param}`,
+        `https://capital-one-server.onrender.com${param}`,
         {
           method: "PUT",
           headers: {

@@ -38,7 +38,7 @@ function useFormSubmit(data, param) {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com/${param}`,
+        `https://capital-one-server.onrender.com${param}`,
         {
           method: "POST",
           headers: {

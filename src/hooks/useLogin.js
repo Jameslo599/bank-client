@@ -39,7 +39,7 @@ function useLogin(data, param) {
     data.userName = data.userName.toLowerCase();
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com/${param}`,
+        `https://capital-one-server.onrender.com${param}`,
         {
           method: "POST",
           headers: {
