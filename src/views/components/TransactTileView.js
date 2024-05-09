@@ -9,7 +9,7 @@ function TransactTileView() {
   const personalize = useCallback(async () => {
     try {
       const transaction = await fetch(
-        `https://capital-one-server-production.up.railway.app/api/bank/history`,
+        `https://server.resilientcoda.com/api/bank/history`,
         { credentials: "include" } // Include cookies in the request
       );
       const transactionHistory = await transaction.json();

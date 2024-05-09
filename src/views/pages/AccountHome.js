@@ -25,7 +25,7 @@ function Home() {
     const personalize = async () => {
       try {
         const response = await fetch(
-          `https://capital-one-server-production.up.railway.app/api/user`,
+          `https://server.resilientcoda.com/api/user`,
           { credentials: "include" } // Include cookies in the request
         );
         const data = await response.json();
