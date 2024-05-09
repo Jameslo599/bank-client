@@ -58,7 +58,7 @@ function Profile() {
       const formData = new FormData();
       formData.append("file", e.target.files[0]);
       const response = await fetch(
-        "capital-one-server-production.up.railway.app/api/avatar",
+        "https://capital-one-server-production.up.railway.app/api/avatar",
         {
           method: "POST",
           credentials: "include", // Include cookies in the request
@@ -76,7 +76,7 @@ function Profile() {
   const personalize = useCallback(async () => {
     try {
       const response = await fetch(
-        `capital-one-server-production.up.railway.app/api/user`,
+        `https://capital-one-server-production.up.railway.app/api/user`,
         { credentials: "include" } // Include cookies in the request
       );
       const data = await response.json();

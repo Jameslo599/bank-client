@@ -7,7 +7,7 @@ function useSignOut() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "capital-one-server-production.up.railway.app/api/session",
+        "https://capital-one-server-production.up.railway.app/api/session",
         {
           method: "DELETE",
           credentials: "include", // Include cookies in the request

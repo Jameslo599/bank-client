@@ -38,7 +38,7 @@ function useFormSubmit(data, param) {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `capital-one-server-production.up.railway.app${param}`,
+        `https://capital-one-server-production.up.railway.app${param}`,
         {
           method: "POST",
           credentials: "include", // Include cookies in the request

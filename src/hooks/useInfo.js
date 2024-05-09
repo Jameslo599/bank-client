@@ -40,7 +40,7 @@ function useInfo(data, param, callback) {
 
     try {
       const response = await fetch(
-        `capital-one-server-production.up.railway.app${param}`,
+        `https://capital-one-server-production.up.railway.app${param}`,
         {
           method: "PUT",
           credentials: "include", // Include cookies in the request
