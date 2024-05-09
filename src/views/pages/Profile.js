@@ -267,9 +267,9 @@ function Profile() {
                     >
                       {backendData.home ? (
                         <>
-                          ({backendData.mobile.slice(0, 3)}){" "}
-                          {backendData.mobile.slice(3, 6)}-
-                          {backendData.mobile.slice(6, 10)}
+                          ({backendData.home.slice(0, 3)}){" "}
+                          {backendData.home.slice(3, 6)}-
+                          {backendData.home.slice(6, 10)}
                         </>
                       ) : (
                         <>(XXX) XXX-XXXX</>
