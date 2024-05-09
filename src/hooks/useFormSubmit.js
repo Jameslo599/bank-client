@@ -38,7 +38,7 @@ function useFormSubmit(data, param) {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com${param}`,
+        `https://capital-one-server-production.up.railway.app${param}`,
         {
           method: "POST",
           credentials: "include", // Include cookies in the request
@@ -71,7 +71,7 @@ function useFormSubmit(data, param) {
     dismissAll();
     try {
       const response = await fetch(
-        "https://capital-one-server.onrender.com/api/email",
+        "https://capital-one-server-production.up.railway.app/api/email",
         {
           method: "POST",
           headers: {

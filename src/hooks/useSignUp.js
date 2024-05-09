@@ -39,7 +39,7 @@ function useSignUp(data, param) {
     data[0].userName = data[0].userName.split(" ").join("");
     try {
       const response = await fetch(
-        `https://capital-one-server.onrender.com${param}`,
+        `https://capital-one-server-production.up.railway.app${param}`,
         {
           method: "POST",
           credentials: "include", // Include cookies in the request
