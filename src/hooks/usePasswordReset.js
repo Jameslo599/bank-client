@@ -39,14 +39,17 @@ function usePasswordReset(data, param) {
     dismissAll();
     setIsLoading(true);
     try {
-      const response = await fetch(`https://server.resilientcoda.com${param}`, {
-        method: "PUT",
-        credentials: "include", // Include cookies in the request
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `capital-one-server-production.up.railway.app${param}`,
+        {
+          method: "PUT",
+          credentials: "include", // Include cookies in the request
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const confirmation = await response.json();
       const status = await response.status;
       if (status === 200) {

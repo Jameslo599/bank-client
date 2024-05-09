@@ -38,14 +38,17 @@ function useSignUp(data, param) {
     setIsLoading(true);
     data[0].userName = data[0].userName.split(" ").join("");
     try {
-      const response = await fetch(`https://server.resilientcoda.com${param}`, {
-        method: "POST",
-        credentials: "include", // Include cookies in the request
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `capital-one-server-production.up.railway.app${param}`,
+        {
+          method: "POST",
+          credentials: "include", // Include cookies in the request
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const confirmation = await response.json();
       const status = await response.status;
       if (status === 200) {
