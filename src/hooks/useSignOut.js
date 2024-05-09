@@ -7,7 +7,7 @@ function useSignOut() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://capital-one-server-production.up.railway.app/api/session",
+        "https://server.resilientcoda.com/api/session",
         {
           method: "DELETE",
           credentials: "include", // Include cookies in the request
