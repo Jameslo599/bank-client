@@ -21,7 +21,9 @@ function ISorting(props) {
   useEffect(() => {
     const personalize = async () => {
       try {
-        const response = await fetch(`/api/user`);
+        const response = await fetch(
+          `https://server.resilientcoda.com/api/user`
+        );
         const data = await response.json();
         setBackendData(data);
       } catch (e) {

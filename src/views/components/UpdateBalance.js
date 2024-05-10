@@ -12,7 +12,6 @@ function UpdateBalance({ personalize, action }) {
     personalize
   );
   const handleChange = (e) => {
-    console.log(formData);
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
