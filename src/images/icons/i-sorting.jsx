@@ -22,7 +22,8 @@ function ISorting(props) {
     const personalize = async () => {
       try {
         const response = await fetch(
-          `https://server.resilientcoda.com/api/user`
+          `https://server.resilientcoda.com/api/user`,
+          { credentials: "include" } // Include cookies in the request
         );
         const data = await response.json();
         setBackendData(data);
