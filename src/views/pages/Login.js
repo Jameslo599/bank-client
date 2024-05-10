@@ -19,7 +19,7 @@ function Login() {
           { credentials: "include" } // Include cookies in the request
         );
         const data = await response.json();
-        return data === false ? console.log(data) : navigate(`/home`);
+        return data === false ? null : navigate(`/home`);
       } catch (error) {
         console.log(error);
       }

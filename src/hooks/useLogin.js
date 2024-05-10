@@ -48,7 +48,6 @@ function useLogin(data, param) {
       });
       const confirmation = await response.json();
       const status = await response.status;
-      console.log(confirmation);
       if (status === 200) {
         notifySuccess();
         navigate(`/home`);
