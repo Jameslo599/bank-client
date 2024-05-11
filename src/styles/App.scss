@@ -842,6 +842,7 @@ input[type="number"] {
     }
     button {
       padding: 0;
+      color: #000;
       background-color: transparent;
     }
     .expand {
@@ -2610,6 +2611,7 @@ input[type="number"] {
   }
 }
 .us-state {
+  color: #000;
   position: relative;
   width: 75%;
   svg {
@@ -2617,6 +2619,9 @@ input[type="number"] {
     top: 0;
     right: 8px;
     z-index: -1;
+  }
+  option {
+    color: #000;
   }
 }
 .update-modal-active {
