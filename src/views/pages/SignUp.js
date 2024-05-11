@@ -1,5 +1,3 @@
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import logo from "../../images/logo.svg";
 import HeaderSupport from "../components/HeaderSupport";
 import Loading from "../components/Loading";
@@ -35,7 +33,6 @@ function SignUp() {
 
   return (
     <div className="login forgot create">
-      {/* <ToastContainer /> */}
       <MyHeaderView
         logoEnd={"/"}
         headerSupport={<HeaderSupport helpButton={""} signText={"Sign In"} />}
@@ -183,6 +180,7 @@ function SignUp() {
                     onChange={handleAddress}
                     onKeyDown={onlyNumbers}
                     value={addressData.zip}
+                    inputMode="numeric"
                     required
                   ></input>
                 </div>
@@ -197,6 +195,7 @@ function SignUp() {
                   onChange={handleChange}
                   onKeyDown={onlyNumbers}
                   placeholder="USD"
+                  inputMode="numeric"
                   required
                 ></input>
               </div>
