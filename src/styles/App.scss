@@ -869,6 +869,7 @@ input[type="number"] {
     }
     button {
       background-color: transparent;
+      color: #000;
       padding: 0;
     }
     @include md {
@@ -1187,6 +1188,7 @@ input[type="number"] {
             border-radius: 4px;
             font-size: 1.125rem;
             background-color: #fff;
+            color: #000;
             &:focus,
             &:hover,
             &:focus-visible {
@@ -1199,6 +1201,7 @@ input[type="number"] {
             width: auto;
             select {
               width: 5rem;
+              color: #000;
             }
           }
         }
@@ -2405,6 +2408,7 @@ input[type="number"] {
       }
       select {
         background: transparent;
+        color: #000;
         padding: 13px;
         margin-right: 8px;
         -moz-appearance: none; /* Firefox */
