@@ -31,7 +31,7 @@ function Forgot() {
             </div>
             <h1>First, let's find your username</h1>
             <p>
-              This information will help us locate your Capital One online
+              This information will help us locate your CODA Bank online
               account(s). If needed, you can update your password after account
               lookup.
             </p>
