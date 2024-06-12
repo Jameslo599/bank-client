@@ -43,7 +43,8 @@ function ResetPassword() {
       setStatus(true);
     };
     validate();
-  }, [params.today]);
+    console.log(status, error);
+  }, [params.today, setError, setStatus]);
 
   return (
     <div>
