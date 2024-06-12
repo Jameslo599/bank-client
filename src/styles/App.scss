@@ -941,15 +941,14 @@ input[type="number"] {
     text-align: center;
     margin: 12px 0;
   }
-  button {
+  a {
     @include button(#fff, transparent);
     display: block;
     max-width: 200px;
     background-color: #255f82;
     margin: 24px auto;
-    a {
-      color: #fff;
-    }
+    padding: 12px;
+    color: #fff;
   }
   h1 {
     font-size: 1.25rem;
