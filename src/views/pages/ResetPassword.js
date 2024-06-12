@@ -28,16 +28,16 @@ function ResetPassword() {
       console.log(originTime);
       const todayTime = new Date();
       if (
-        originTime.getDate() !== todayTime.getDate() &&
-        originTime.getMonth() !== todayTime.getMonth() &&
+        originTime.getDate() !== todayTime.getDate() ||
+        originTime.getMonth() !== todayTime.getMonth() ||
         originTime.getFullYear() !== todayTime.getFullYear()
       ) {
-        return setError(true);
+        setError(true);
       }
-      return setStatus(true);
+      setStatus(true);
     };
     validate();
-  });
+  }, [params.today]);
 
   return (
     <div>
