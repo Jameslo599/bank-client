@@ -18,7 +18,6 @@ function Forgot() {
 
   return (
     <div className="login forgot">
-      {/* <ToastContainer /> */}
       <MyHeaderView
         logoEnd="/"
         headerSupport={<HeaderSupport helpButton={""} signText={"Sign In"} />}
