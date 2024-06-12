@@ -38,13 +38,14 @@ function ResetPassword() {
         originTime.getMonth() !== todayTime.getMonth() ||
         originTime.getFullYear() !== todayTime.getFullYear()
       ) {
-        setError(true);
+        return setError(true);
       }
-      setStatus(true);
+      return setStatus(true);
     };
     validate();
-    console.log(status, error);
   }, [params.today, setError, setStatus]);
+
+  console.log(status, error);
 
   return (
     <div>
