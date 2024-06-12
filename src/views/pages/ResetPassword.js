@@ -25,8 +25,14 @@ function ResetPassword() {
   useEffect(() => {
     const validate = () => {
       const originTime = new Date(+params.today);
-      console.log(originTime);
       const todayTime = new Date();
+      console.log(
+        originTime,
+        todayTime,
+        originTime.getDate() !== todayTime.getDate(),
+        originTime.getMonth() !== todayTime.getMonth(),
+        originTime.getFullYear() !== todayTime.getFullYear()
+      );
       if (
         originTime.getDate() !== todayTime.getDate() ||
         originTime.getMonth() !== todayTime.getMonth() ||
