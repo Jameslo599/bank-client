@@ -10,7 +10,7 @@ Sending funds to other users
 
 **Link to project:** https://resilientcoda.com/
 
-![application website](/client/src/images/coda.webp)
+![application website](/src/images/coda.webp)
 
 ## How It's Made:
 
