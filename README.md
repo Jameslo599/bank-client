@@ -24,6 +24,10 @@ Regarding the loading of personalized user information, understanding the intric
 
 While building custom hooks, integrating the 'finally' clause within try-catch blocks significantly enhanced UI robustness, providing a final termination of the temporary loading spinner that appears during server requests. Utilizing useState facilitated dynamic UI rendering especially with modals, offering users tailored experiences based on varying conditions like open/close.
 
+Capital One features a proprietary chatbot that assists users in navigating the application and answering common questions. Without access to their technology, I leveraged the react-chatbot-kit to develop a similar chatbot. This toolkit provided a robust foundation, enabling me to create a chatbot with functionality comparable to Capital One's, despite minor styling differences. I was fortunate to learn from such an excellent model.
+
 ## Optimizations
 
 ## Lessons Learned:
+
+Particularly noteworthy was the clarity and ease of understanding the documentation. During the development cycle, I used many Node.js modules for the first time, requiring me to read through numerous documentations. I quickly realized the quality of documentation can vary significantly. I greatly appreciated the effort put into making the react-chatbot-kit documentation so accessible and readable.
