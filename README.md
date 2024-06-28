@@ -26,6 +26,8 @@ While building custom hooks, integrating the 'finally' clause within try-catch b
 
 Capital One features a proprietary chatbot that assists users in navigating the application and answering common questions. Without access to their technology, I leveraged the react-chatbot-kit to develop a similar chatbot. This toolkit provided a robust foundation, enabling me to create a chatbot with functionality comparable to Capital One's, despite minor styling differences. I was fortunate to learn from such an excellent model.
 
+The password reset system validates incoming form data to ensure an account exists with the correct credentials. Once validated, the email controller uses bcrypt to salt and hash a 24-hour secret key, which is then emailed as a link to the account's email address. This process is facilitated by Nodemailer, a Node.js module that enables seamless email sending from my email address. When the user clicks the link in the email, they are directed to a unique page where they can submit a PUT request through a password reset form to reset their password.
+
 ## Optimizations
 
 ## Lessons Learned:
