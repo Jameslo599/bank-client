@@ -30,6 +30,8 @@ The password reset system validates incoming form data to ensure an account exis
 
 ## Optimizations
 
+I plan to add a feature to filter transactions by various criteria such as amounts, topics, and recipients. This enhancement will improve the user experience, especially for users with a large number of transactions. Additionally, I want to implement sorting transactions by date, from oldest to newest.
+
 ## Lessons Learned:
 
 Particularly noteworthy was the clarity and ease of understanding the documentation. During the development cycle, I used many Node.js modules for the first time, requiring me to read through numerous documentations. I quickly realized the quality of documentation can vary significantly. I greatly appreciated the effort put into making the react-chatbot-kit documentation so accessible and readable.
