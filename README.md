@@ -34,4 +34,6 @@ I plan to add a feature to filter transactions by various criteria such as amoun
 
 ## Lessons Learned:
 
+This was my first time using React to build a project, and I was very impressed with its performance. Most notably, the first meaningful paint is under three seconds, making React an excellent choice for general web development. I also appreciated JSX, which acts as a templating language similar to EJS. Overall, everything felt intuitive, and I'm excited to continue working with hooks and components to write efficient and readable code.
+
 Particularly noteworthy was the clarity and ease of understanding the documentation. During the development cycle, I used many Node.js modules for the first time, requiring me to read through numerous documentations. I quickly realized the quality of documentation can vary significantly. I greatly appreciated the effort put into making the react-chatbot-kit documentation so accessible and readable.
